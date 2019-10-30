@@ -40,9 +40,17 @@ namespace :db do
     $stdout.puts version
   end
 
+  desc 'create database'
+  task create: :connect do
+    Sequel.connect(settings[ENV['RACK_ENV']].merge('database' => 'postgres')) do |db|
+      db.execute "DROP DATABASE IF EXISTS #{settings[ENV['RACK_ENV']]['database']}"
+      db.execute "CREATE DATABASE #{settings[ENV['RACK_ENV']]['database']}"
+    end
+  end
+
   desc 'Run all migrations in db/migrations'
   task migrate: :connect do
-    Sequel::Migrator.apply(DB, 'db/migrations')
+    Sequel::Migrator.apply(DB, 'db/migrate')
     Rake::Task['db:version'].execute
   end
 

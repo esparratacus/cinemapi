@@ -13,6 +13,7 @@ gem 'grape'
 gem 'grape-entity'
 gem 'grape-swagger'
 gem 'grape-swagger-entity'
+gem 'dry-transaction'
 
 group :development, :test do
   gem 'grape-starter'
@@ -26,4 +27,4 @@ end
 
 # DB stack
 gem 'sequel'
-gem 'sqlite3'
+gem 'pg'

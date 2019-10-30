@@ -1,21 +1,21 @@
-# ActiveRecord Database Configuration
 development:
   adapter: postgresql
   encoding: unicode
   timeout: 5000
-  user: postgres
-  database: name_development
+  user: esparratacus
+  password: techspec1987
+  database: cinemapi_development
 
 test:
   adapter: postgresql
   encoding: unicode
   timeout: 5000
   user: postgres
-  database: name_test
+  database: cinemapi_test
 
 production:
   adapter: postgresql
   encoding: unicode
   timeout: 5000
   user: postgres
-  database: name_production
+  database: cinemapi_production
