@@ -1,20 +1,17 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
 
 - [adept it to your needs](#adept-it-to-your-needs)
-  - [Your awesome API](#your-awesome-api)
+  - [CINEMAPI](#CINEMAPI)
   - [Usage](#usage)
   - [Rake Tasks](#rake-tasks)
-  - [Docker](#docker)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 <!-- /TOC -->
 
-# adept it to your needs
+# adapt it to your needs
 
-## Your awesome API
+##  CINEMAPI
 
-A [Grape](http://github.com/ruby-grape/grape) API mounted on [Rack](https://github.com/rack/rack), starting point for API development with Grape. It also includes [grape-swagger](http://github.com/ruby-grape/grape-swagger) for documentation generating.
+Proof of concept for movie reservation system
 
 
 ## Usage
@@ -22,21 +19,13 @@ A [Grape](http://github.com/ruby-grape/grape) API mounted on [Rack](https://gith
 All following commands can and should be adapted/replaced to your needs.
 
 - [Setup](#setup)
-- [Test](#test)
 - [Run](#run)
-- [Update](#update)
 - [Stop](#stop)
 
 #### `Setup`
 
 ```
 $ ./script/setup
-```
-
-#### `Test`
-
-```
-$ ./script/test
 ```
 
 #### `Run`
@@ -52,12 +41,6 @@ For production, set `RACK_ENV=production`
 $ RACK_ENV=production ./script/server *port (default: 9292)
 ```
 
-#### `Update`
-
-… dependencies
-```
-$ ./script/update
-```
 
 #### `Stop`
 
@@ -77,24 +60,9 @@ $ ./script/stop
 rake routes
 ```
 
-#### OpenApi Documentation and Validation
-
-```
-rake oapi:fetch
-rake oapi:validate
-```
 comming from: [`grape-swagger` Rake Tasks](https://github.com/ruby-grape/grape-swagger#rake-tasks)
-
-## Docker
-
-- build: `docker build -t awesome_api .`
-- run: `docker run -it -p 9292:9292 --rm awesome_api`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/name/repo.
+Bug reports and pull requests are welcome on GitHub at https://github.com/esparratacus/cinemapi
 
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](LICENSE).
